@@ -8,8 +8,6 @@ from spacy.util import load_config_from_str, registry
 from .lex_attrs import LEX_ATTRS
 from .stop_words import STOP_WORDS
 
-__version__ = "0.1.0"
-
 DEFAULT_CONFIG = """
     [nlp]
 

@@ -4,14 +4,12 @@ import pathlib
 
 from setuptools import find_packages, setup
 
-from och import __version__
-
 here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / "README.md").read_text(encoding="utf8")
 
 setup(
     name="och",
-    version=__version__,
+    version="0.1.0",
     description="Old Chinese language and models for spaCy NLP library",
     long_description=long_description,
     long_description_content_type="text/markdown",

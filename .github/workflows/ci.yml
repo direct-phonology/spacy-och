@@ -16,4 +16,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: python setup.py install
-      - run: python setup.py test
+      - run: python -m unittest
