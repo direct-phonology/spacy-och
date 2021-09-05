@@ -1,0 +1,4 @@
+spacy
+pre-commit
+isort
+black
