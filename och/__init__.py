@@ -14,7 +14,7 @@ DEFAULT_CONFIG = """
     [nlp]
 
     [nlp.tokenizer]
-    @tokenizers = "spacy.zh.OldChineseTokenizer"
+    @tokenizers = "spacy.och.OldChineseTokenizer"
 """
 
 # For now, just extend the default Chinese tokenizer
