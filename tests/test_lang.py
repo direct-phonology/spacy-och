@@ -1,4 +1,4 @@
-"""Test the Old Chinese language object using spaCy."""
+"""Test the Old Chinese language object."""
 
 from unittest import TestCase
 
