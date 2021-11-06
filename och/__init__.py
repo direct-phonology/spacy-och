@@ -30,6 +30,13 @@ def create_old_chinese_tokenizer() -> Callable[[Language], OldChineseTokenizer]:
     return old_chinese_tokenizer_factory
 
 
+# Add lookups to the registry
+# https://spacy.io/api/lookups
+@registry.lookups("och")
+def find_lookups():
+    return {file.stem[4:]: str(file) for file in files("och.lookups").glob("*.json")}
+
+
 # https://spacy.io/api/language#defaults
 class OldChineseDefaults(Language.Defaults):
     config = load_config_from_str(DEFAULT_CONFIG)
