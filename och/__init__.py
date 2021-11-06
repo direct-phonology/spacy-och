@@ -1,6 +1,6 @@
+from importlib.resources import files
 from typing import Callable
 
-import spacy
 from spacy.lang.zh import ChineseTokenizer, Segmenter
 from spacy.language import Language
 from spacy.util import load_config_from_str, registry
@@ -25,7 +25,7 @@ class OldChineseTokenizer(ChineseTokenizer):
 @registry.tokenizers("spacy.och.OldChineseTokenizer")
 def create_old_chinese_tokenizer() -> Callable[[Language], OldChineseTokenizer]:
     def old_chinese_tokenizer_factory(nlp: Language) -> OldChineseTokenizer:
-        return OldChineseTokenizer(nlp, segmenter=Segmenter.char)
+        return OldChineseTokenizer(nlp.vocab, segmenter=Segmenter.char)
 
     return old_chinese_tokenizer_factory
 
@@ -39,7 +39,7 @@ class OldChineseDefaults(Language.Defaults):
 
 
 # https://spacy.io/api/language#class-attributes
-@spacy.registry.languages("och")
+@registry.languages("och")
 class OldChinese(Language):
     lang = "och"
     Defaults = OldChineseDefaults
