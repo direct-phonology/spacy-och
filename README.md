@@ -15,7 +15,7 @@ this package currently doesn't include trained models and is intended for basic 
 ```python
 >>> import spacy
 >>> nlp = spacy.blank("och")
->>> from och.examples import sentences
+>>> from spacy_och.examples import sentences
 >>> doc = nlp(sentences[0])
 >>> doc.text
 子曰：「上下无常，非為邪也。進退无恆，非離群也。君子進德脩業、欲及時也，故无咎。」
@@ -44,4 +44,4 @@ if everything looks ok, upload to the real PyPI:
 $ python -m twine upload dist/*
 ```
 ## license
-code is licensed under the [MIT license](LICENSE). some data in `och/lookups` is derived from files licensed under the [unicode data files and software license](https://www.unicode.org/license.html).
+code is licensed under the [MIT license](LICENSE). some lookups data is derived from files licensed under the [unicode data files and software license](https://www.unicode.org/license.html).

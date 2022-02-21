@@ -16,7 +16,7 @@ class OldChineseTokenizer(ChineseTokenizer):
 
 # Without a model, just segment by character
 # https://spacy.io/api/tokenizer
-@registry.tokenizers("spacy.och.OldChineseTokenizer")
+@registry.tokenizers("spacy_och.OldChineseTokenizer")
 def create_old_chinese_tokenizer() -> Callable[[Language], OldChineseTokenizer]:
     def old_chinese_tokenizer_factory(nlp: Language) -> OldChineseTokenizer:
         return OldChineseTokenizer(nlp.vocab, segmenter=Segmenter.char)
@@ -28,7 +28,9 @@ def create_old_chinese_tokenizer() -> Callable[[Language], OldChineseTokenizer]:
 # https://spacy.io/api/lookups
 @registry.lookups("och")
 def find_lookups():
-    return {file.stem[4:]: str(file) for file in files("och.lookups").glob("*.json")}
+    return {
+        file.stem[4:]: str(file) for file in files("spacy_och.lookups").glob("*.json")
+    }
 
 
 # https://spacy.io/api/language#defaults

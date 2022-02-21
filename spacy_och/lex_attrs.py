@@ -1,6 +1,7 @@
 """
-Lexical attribute functions for Old Chinese. Adapted from:
-https://github.com/explosion/spaCy/blob/master/spacy/lang/zh/lex_attrs.py
+Lexical attribute functions for Old Chinese.
+
+Adapted from: https://github.com/explosion/spaCy/blob/master/spacy/lang/zh/lex_attrs.py
 """
 
 import re

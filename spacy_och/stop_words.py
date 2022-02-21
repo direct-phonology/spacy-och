@@ -1,6 +1,7 @@
 """
-Stop words for Old Chinese. Inspired by:
-https://github.com/explosion/spaCy/blob/master/spacy/lang/zh/stop_words.py
+Stop words for Old Chinese.
+
+Inspired by: https://github.com/explosion/spaCy/blob/master/spacy/lang/zh/stop_words.py
 """
 
 STOP_WORDS = set(
