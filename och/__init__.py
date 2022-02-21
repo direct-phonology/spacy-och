@@ -19,7 +19,7 @@ class OldChineseTokenizer(ChineseTokenizer):
 @registry.tokenizers("spacy.och.OldChineseTokenizer")
 def create_old_chinese_tokenizer() -> Callable[[Language], OldChineseTokenizer]:
     def old_chinese_tokenizer_factory(nlp: Language) -> OldChineseTokenizer:
-        return OldChineseTokenizer(nlp, segmenter=Segmenter.char)
+        return OldChineseTokenizer(nlp.vocab, segmenter=Segmenter.char)
 
     return old_chinese_tokenizer_factory
 
