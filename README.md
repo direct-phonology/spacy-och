@@ -33,6 +33,7 @@ $ pre-commit install
 ## building
 build a source archive and distribution for a release:
 ```sh
+$ rm -rf dist/*
 $ python -m build
 ```
 publish the release on [test PyPI](https://test.pypi.org/) (useful for making sure everything worked):
